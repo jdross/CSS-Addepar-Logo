@@ -81,7 +81,7 @@ Height = 2/3 * width
 * loading: ugly loading
 * loadSync: way better loading
 */
-.addelogo.animated .al-fill, .addelogo.loadSync .al-fill, .addelogo.loading .al-fill {
+.addelogo.animated .al-fill, .addelogo.loadSync .al-fill, .addelogo.loading .al-fill,  .addelogo.load3D .al-fill{
 	-webkit-animation-duration: 2s;
 	-webkit-animation-iteration-count: infinite;
 	-webkit-animation-timing-function: linear;
@@ -105,10 +105,18 @@ Height = 2/3 * width
 	-webkit-animation-name: loadRight-Sync;
 }
 
+.addelogo.load3D .al-left .al-fill {
+	-webkit-animation-name: loadLeft3D;
+}
+.addelogo.load3D .al-right .al-fill {
+	-webkit-animation-name: loadRight3D;
+}
+
 
 /** ANIMATIONS - Should always be added in pairs.
 * loadLeft & loadRight
 * loadLeft-Sync & loadRight-Sync
+* loadLeft3D & loadRight3D
 */
 @-webkit-keyframes 'loadLeft'
 	{       
@@ -199,6 +207,40 @@ Height = 2/3 * width
 	}
 }
 
+@-webkit-keyframes 'loadLeft3D'
+	{       
+	0% {
+		top: 0;
+		height: 100%;
+	}
+	25% {
+	}
+	50%{
+		-webkit-transform: rotate3d(0, 100, 0, 180deg);
+	}
+	75% {
+	}
+	100% {
+		-webkit-transform: rotate3d(0, 100, 0, 180deg);
+	}
+}
+@-webkit-keyframes 'loadRight3D'
+	{       
+	0% {
+		top: 0;
+		height: 100%;
+	}
+	25% {
+	}
+	50%{
+		-webkit-transform: rotate3d(0, 100, 0, 0deg);
+	}
+	75% {
+	}
+	100% {
+		-webkit-transform: rotate3d(0, 100, 0, 180deg);
+	}
+}
 
 /** 
 *	Bonus: This is the "Mathematically correct" logo.
