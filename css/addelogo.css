@@ -73,6 +73,9 @@ Height = 2/3 * width
 .addelogo.hidden.reversed .al-right .al-fill {
 	background-color: #fff;
 }
+.addelogo.hover:hover .al-left .al-fill {
+	height: 100%;
+}
 
 /** ANIMATION CLASSES
 * loading: ugly loading
