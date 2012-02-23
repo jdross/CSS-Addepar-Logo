@@ -64,9 +64,11 @@ Height = 2/3 * width
 }
 .addelogo.hidden .al-left .al-fill {
 	background-color: #939598;
+	height: 100%;
 }
 .addelogo.hidden .al-right .al-fill {
 	background-color: #000;
+	height: 100%;
 }
 .addelogo.hidden.reversed .al-right .al-fill {
 	background-color: #fff;
@@ -82,8 +84,8 @@ Height = 2/3 * width
 	-webkit-animation-timing-function: linear;
 }
 
-.addelogo.slow .al-fill {
-	-webkit-animation-duration: 4s;
+.addelogo.once .al-fill {
+	-webkit-animation-iteration-count: 1;
 }
 
 .addelogo.loading .al-left .al-fill {
