@@ -14,6 +14,8 @@ Height = 2/3 * width
 	height: 100%;
 	width: 30.3%;
 	background-color: #939598;
+	transform: skew(-32.4deg,0deg);
+	-moz-transform: skew(-32.4deg,0deg);
 	-webkit-transform: skew(-32.4deg,0deg);
 }
 
@@ -24,6 +26,8 @@ Height = 2/3 * width
 	height: 47.1%;
 	width: 30.2%;
 	background-color: #000;
+	transform: skew(32deg,0deg);
+	-moz-transform: skew(32deg,0deg);
 	-webkit-transform: skew(32deg,0deg);
 }
 
@@ -82,38 +86,60 @@ Height = 2/3 * width
 * loadSync: way better loading
 */
 .addelogo.animated .al-fill, .addelogo.loadSync .al-fill, .addelogo.loading .al-fill,  .addelogo.load3D .al-fill{
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	
+	-moz-animation-duration: 2s;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: linear;
+	
 	-webkit-animation-duration: 2s;
 	-webkit-animation-iteration-count: infinite;
 	-webkit-animation-timing-function: linear;
 }
 
 .addelogo.once .al-fill {
+	animation-iteration-count: 1;
+	-moz-animation-iteration-count: 1;
 	-webkit-animation-iteration-count: 1;
 }
 
 .addelogo.loading .al-left .al-fill {
+	animation-name: loadLeft;
+	-moz-animation-name: loadLeft;
 	-webkit-animation-name: loadLeft;
 }
 .addelogo.loading .al-right .al-fill {
-	-webkit-animation-name: loadRight;
+	animation-name: loadRight;
+	-moz-animation-name: loadRight;
+	-webkit-animation-name: loadRight;	
 }
 
 .addelogo.loadSync .al-left .al-fill {
+	animation-name: loadLeft-Sync;
+	-moz-animation-name: loadLeft-Sync;
 	-webkit-animation-name: loadLeft-Sync;
 }
 .addelogo.loadSync .al-right .al-fill {
+	animation-name: loadRight-Sync;
+	-moz-animation-name: loadRight-Sync;
 	-webkit-animation-name: loadRight-Sync;
 }
 
 .addelogo.load3D .al-left .al-fill {
+	animation-name: loadLeft3D;
+	-moz-animation-name: loadLeft3D;
 	-webkit-animation-name: loadLeft3D;
 }
 .addelogo.load3D .al-right .al-fill {
+	animation-name: loadRight3D;
+	-moz-animation-name: loadRight3D;
 	-webkit-animation-name: loadRight3D;
 }
 
 
-/** ANIMATIONS - Should always be added in pairs.
+/** ANIMATIONS - Should always be added in pairs. Only webkit supported now.
 * loadLeft & loadRight
 * loadLeft-Sync & loadRight-Sync
 * loadLeft3D & loadRight3D
@@ -255,6 +281,8 @@ Height = 2/3 * width
 		height: 46.9%;
 		width: 30.2%;
 		background-color: #000;
+		transform: skew(32.4deg,0deg);
+		-moz-transform: skew(32.4deg,0deg);
 		-webkit-transform: skew(32.4deg,0deg);
 
 }
